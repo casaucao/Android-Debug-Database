@@ -41,7 +41,7 @@ function queryFunction() {
 
    var query = $('#query').val();
 
-   $.ajax({url: "query?query="+escape(query), success: function(result){
+   $.ajax({url: "query?query="+encodeURIComponent(query), success: function(result){
 
            result = JSON.parse(result);
            inflateData(result);
